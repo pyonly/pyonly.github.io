@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/python.js"></script>
+</head>
+<body>
+<h1>Call JavaScript from Python</h1>
+<button onclick="Python.call('clicked')">Say Hello</button>
+
+<script>
+Python.init("{{ host }}", "{{ port }}", "{{ path }}");
+
+
+function getName(e){
+	return prompt("Please enter your name", "Name");
+}
+function sayHello(name){
+	alert("Hello " + name);
+}
+</script>
+</body>
+</html>
