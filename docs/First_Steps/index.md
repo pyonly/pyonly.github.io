@@ -3,7 +3,7 @@ Let's create a simple "Hello World" example app:
 
 ## 1. Python code
 First, we have to create a python file, which we call "example.py" in this tutorial. This file contains the following content:
-<example-box path="docs/First_Steps/HelloWorld" file="example.py"></example-box>
+<example-box path="docs/First_Steps/examples/HelloWorld" file="example.py"></example-box>
 
 At the beginning of the file, imports of PyOnly and Tornado are necessary. The variable ``port`` defines the port to listen on. It is passed as an argument to the ``webapp.listen`` method. Besides, it is used together with the variable host in order to render the ``index.html`` file. 
 
@@ -17,14 +17,14 @@ After calling to listen on Tornado's ``webapp``, we need an input-output loop. T
 
 ## 2. HTML-Code
 Now we can create the ``index.html`` file with the following simple HTML-Code:
-<example-box path="docs/First_Steps/HelloWorld" file="index.html"></example-box>
+<example-box path="docs/First_Steps/examples/HelloWorld" file="index.html"></example-box>
 The ``python.js`` file can to be added in two ways. One option is to include it from the following CDN:
 ```html
 <script src="http://pyonly.com/resources/javascript/python/versions/1-0/python.js"></script>
 ```
 Alternatively, you [can download the file here](https://pyonly.000webhostapp.com/resources/js/Python/1/python_js-Download-version-1.zip). After extracting it, you can add it to the ``<head>`` section (as ``<script src="python.js"></script>`` or when using a subfolder as ``<script src="js/python.js"></script>``).
 
-Between ``<script>`` and ``</script>`` tags we need this JavaScript code (``Python.init("{{ host }}", "{{ port }}", "{{ path }}");``) to initialize a connection to Python. The arguments (like ``{{ host }}``) of the ``init`` method are replaced by the values defined in the ``Index`` class (view) in our Python code. 
+Between ``<script>`` and ``</script>`` tags we need this JavaScript code (``Python.init("\{\{ host \}\}", "\{\{ port \}\}", "\{\{ path \}\}");``) to initialize a connection to Python. The arguments (like ``\{\{ host \}\}``) of the ``init`` method are replaced by the values defined in the ``Index`` class (view) in our Python code. 
 
 Furthermore, we use a paragraph (with ``id="output"``) in order to change the element content with Python to "Hello World!". 
 
