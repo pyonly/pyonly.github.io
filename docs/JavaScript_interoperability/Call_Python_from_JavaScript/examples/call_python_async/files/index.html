@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/python.js"></script>
+</head>
+<body>
+<h1>Call Python from JavaScript</h1>
+
+<button onclick="callPython();">Fibonacci sequence</button>
+<p id="output"></p>
+<script>
+Python.init("{{ host }}", "{{ port }}", "{{ path }}");
+
+async function callPython(){
+    var fibonacci_sequence = await Python.call_async('fibonacci', 1000);
+    document.getElementById('output').innerHTML = fibonacci_sequence;
+}
+</script>
+</body>
+</html>
