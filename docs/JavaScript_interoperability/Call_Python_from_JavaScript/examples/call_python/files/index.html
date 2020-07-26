@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/python.js"></script>
+</head>
+<body>
+<h1>Call Python from JavaScript</h1>
+
+<button onclick="Python.call('fibonacci', 1000)">Fibonacci sequence</button>
+<p id="output"></p>
+<script>
+Python.init("{{ host }}", "{{ port }}", "{{ path }}");
+</script>
+</body>
+</html>
