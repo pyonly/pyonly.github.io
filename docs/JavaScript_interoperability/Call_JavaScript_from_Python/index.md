@@ -1,6 +1,6 @@
 # Call JavaScript from Python
 A JavaScript-function can be called in the following way:
-```Python
+```python
 return_value = await self.window.call("function_name", argument_1, argument_2, ...)
 ```
 * The first argument of the ``window.call``-method has to be the name of the JavaScript-function.
