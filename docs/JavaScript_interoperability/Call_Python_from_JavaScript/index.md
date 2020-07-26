@@ -1,6 +1,6 @@
 # Call Python-functions from JavaScript
 A Python-function can be called in the following way:
-```JavaScript
+```javascript
 Python.call('function_name', argument_1, argument_2, ...);
 ```
 * The first argument of the ```Python.call-method``` has to be the name of the Python-function.
@@ -14,7 +14,7 @@ When the button is clicked, the function ``fibonacci`` is called in Python. This
 In order to get a return value we have to create an asynchronous function/need a Promise.
 
 A Python-function returning a value can be called in the following way:
-```JavaScript
+```javascript
 var return_value = await Python.call_async('function_name', argument_1, argument_2, ...);
 ```
 * The first argument of the Python.call-method has to be the name of the Python-function.
